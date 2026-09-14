@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+
+<html lang="es" style=""><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"outline":"#877274","surface-tint":"#6b1d2f","error-container":"#fbeae8","on-tertiary-fixed-variant":"#70343e","primary-fixed-dim":"#ffd9dd","on-primary-fixed-variant":"#501322","secondary-fixed":"#f0e7db","on-primary":"#ffffff","surface":"#fdfbf7","on-background":"#1f1b14","surface-container-high":"#ece2d5","inverse-primary":"#ffb2bc","on-primary-fixed":"#400013","surface-variant":"#eadfc0","on-tertiary-fixed":"#390915","on-error":"#ffffff","on-surface-variant":"#5c4a4c","surface-dim":"#e8dfd5","background":"#fdfbf7","surface-container-lowest":"#ffffff","on-tertiary-container":"#f8d5db","tertiary-fixed-dim":"#ffb2bc","inverse-on-surface":"#f9efe3","secondary-container":"#f4ece1","secondary":"#8a6b63","primary":"#6b1d2f","primary-hover":"#521423","error":"#ba1a1a","primary-fixed":"#f5e0e3","tertiary-container":"#4e1622","on-secondary-fixed-variant":"#61453e","tertiary-fixed":"#ffd9dd","secondary-fixed-dim":"#dccfbf","primary-container":"#6b1d2f","surface-container-highest":"#e4d9cb","tertiary":"#4e1622","inverse-surface":"#343028","on-primary-container":"#ffffff","surface-container":"#f5efeb","on-tertiary":"#ffffff","on-secondary":"#ffffff","on-secondary-container":"#4b342e","surface-bright":"#fdfbf7","on-surface":"#2b2223","on-error-container":"#93000a","outline-variant":"#d6c5c0","on-secondary-fixed":"#36221d","surface-container-low":"#faf6f0"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.75rem","margin-mobile":"1rem","gutter-sm":"1rem","space-3xl":"4rem","gutter-md":"1.5rem","space-2xl":"3rem","gutter-lg":"2rem","space-2xs":"0.25rem","space-xl":"2rem","margin-desktop":"2.5rem","space-lg":"1.5rem","space-md":"1rem","margin-tablet":"1.5rem","space-xs":"0.5rem"},"fontFamily":{"body-lg":["Plus Jakarta Sans"],"title-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"numeric-stepper":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"title-lg":["18px",{"lineHeight":"26px","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}],"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"numeric-stepper":["20px",{"lineHeight":"24px","fontWeight":"700"}],"display-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}}</script><style id="warm-theme-overrides">:root{--primary:#7B1E32;--primary-hover:#651728;--surface:#FAF5EE;--surface-lowest:#F7EFE1;--surface-low:#F3E7D3;--surface-container:#ECE0CE;--surface-high:#E4D5BF;--surface-highest:#DCBFAF;}body{background-color:#FAF5EE!important;}header{background-color:rgba(247,239,225,0.96)!important;border-color:#E4D5BF!important;}aside{background-color:#F7EFE1!important;border-color:#E4D5BF!important;}.bg-surface{background-color:#FAF5EE!important;}.bg-surface-container-lowest,.bg-surface-container-lowest\/95{background-color:#F7EFE1!important;}.bg-surface-container-low{background-color:#F3E7D3!important;}.bg-surface-container{background-color:#ECE0CE!important;}.bg-surface-container-high{background-color:#E4D5BF!important;}.bg-surface-container-highest{background-color:#DCBFAF!important;}.border-surface-container-high{border-color:#E0D0BB!important;}.divide-surface-container-high>*{border-color:#E4D5BF!important;}.bg-primary{background-color:#7B1E32!important;}.hover\:bg-primary-hover:hover{background-color:#651728!important;}.text-primary{color:#7B1E32!important;}.border-primary{border-color:#7B1E32!important;}.bg-primary-fixed{background-color:#F7DDE2!important;}.bg-secondary-fixed{background-color:#EFE4D5!important;}.text-on-surface{color:#2B2120!important;}.text-on-surface-variant{color:#695355!important;}.border-outline-variant\/40,.border-outline-variant\/50,.border-outline-variant\/60{border-color:#D8C4BC!important;}</style></head><body class="bg-surface font-body-md text-on-surface"><header class="fixed top-0 left-0 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-xl border-b border-surface-container-high z-50 flex items-center justify-between px-gutter-lg"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">inventory_2</span></div><div class="flex flex-col"><span class="font-title-md text-title-md text-primary font-bold leading-none">ZYI</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Colegio Villafañe</span></div></div><div class="h-6 w-[1px] bg-surface-container-highest hidden md:block"></div><!-- Ciclo Escolar Configurable Manualmente --><div class="flex items-center gap-space-2xs bg-surface-container-low border border-outline-variant/50 px-space-sm py-1.5 rounded-full shadow-xs hover:border-primary/40 transition-colors"><span class="material-symbols-outlined text-primary text-[18px]">calendar_today</span><label class="font-label-sm text-label-sm text-on-surface-variant font-medium hidden sm:inline" for="cycleInput">Ciclo:</label><input class="bg-transparent border-none p-0 font-label-md text-label-md text-on-surface font-semibold focus:ring-0 focus:outline-none w-28 text-left cursor-text hover:text-primary transition-colors" id="cycleInput" title="Haz clic para editar el ciclo escolar" type="text" value="2024 - 2025"/><button class="text-on-surface-variant hover:text-primary flex items-center justify-center p-0.5" id="btnEditCycle" title="Editar Ciclo"><span class="material-symbols-outlined text-[15px]">edit</span></button></div></div></header><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest border-r border-surface-container-high z-40 flex flex-col pt-20 pb-space-lg"><nav class="flex-1 px-space-sm space-y-2"><button class="nav-btn w-full text-left flex items-center px-space-sm py-space-xs rounded-lg transition-all gap-space-sm bg-primary text-on-primary font-title-md shadow-sm" data-nav="inventario-general" type="button"><span class="material-symbols-outlined text-[20px]">inventory</span>Inventario General</button><button class="nav-btn w-full text-left flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-lg text-label-lg" data-nav="conteo-rapido" type="button"><span class="material-symbols-outlined text-[20px]">check_circle</span>Conteo Rápido</button><button class="nav-btn w-full text-left flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-lg text-label-lg" data-nav="reportes-y-auditorias" type="button"><span class="material-symbols-outlined text-[20px]">bar_chart</span>Reportes y Lotes</button></nav></aside><div class="pl-64"><main class="w-full px-gutter-lg pt-16 pb-space-2xl bg-surface min-h-screen">
+<!-- SECCIÓN 1: INVENTARIO GENERAL -->
+<section class="flex flex-col w-full" id="viewInventario">
+<!-- Banner de Bienvenida y Resumen Estratégico -->
+<section class="relative overflow-hidden rounded-xl bg-surface-container-low border border-surface-container-high shadow-sm p-space-lg md:p-space-xl mb-space-xl mt-space-md">
+<div class="absolute -right-12 -top-12 w-64 h-64 rounded-full bg-primary-fixed opacity-30 blur-3xl pointer-events-none"></div>
+<div class="absolute right-1/3 -bottom-10 w-48 h-48 rounded-full bg-secondary-fixed opacity-40 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded-full bg-surface-container-highest text-primary font-label-md text-label-md mb-space-xs border border-outline-variant/40">
+<span class="material-symbols-outlined text-[16px]">school</span>
+          Gestión de Recursos y Equipamiento
+        </div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-space-xs">
+          ¡Bienvenido al Gestor de Inventario Escolar!
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+          Organiza, actualiza y controla el material escolar, equipos de aula e insumos educativos de forma sencilla y en tiempo real.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-primary hover:bg-primary-hover text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm hover:shadow transition-all active:scale-[0.98]" id="btnOpenNewItem">
+<span class="material-symbols-outlined text-[20px]">add_box</span>
+<span class="">Añadir Nuevo Objeto</span>
+</button>
+</div>
+</div>
+<!-- Métricas Rápidas / Resumen (3 Tarjetas Equilibradas) -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md mt-space-lg">
+<div class="bg-surface-container-lowest p-space-md rounded-lg border border-surface-container-high shadow-xs flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block font-semibold">Artículos Registrados</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold mt-0.5" id="metricTotalArticles">10</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-space-2xs">Catálogo A-Z</span>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-low border border-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">category</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg border border-surface-container-high shadow-xs flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block font-semibold">Unidades Totales</span>
+<span class="font-headline-md text-headline-md text-primary font-bold mt-0.5" id="metricTotalUnits">652</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-space-2xs">Disponibles en sedes</span>
+</div>
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">apps</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg border border-surface-container-high shadow-xs flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block font-semibold">Stock Bajo</span>
+<span class="font-headline-md text-headline-md text-primary font-bold mt-0.5" id="metricLowStock">2</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-space-2xs">Atención prioritaria (≤ sugerido)</span>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">notification_important</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Barra de Búsqueda y Ordenamiento Alfabetico -->
+<div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-sm mb-space-md">
+<div class="flex-1 flex items-center gap-space-xs bg-surface-container-lowest border border-surface-container-high rounded-xl shadow-xs px-space-sm py-space-xs focus-within:border-primary/60 transition-colors">
+<span class="material-symbols-outlined text-primary text-[20px]">search</span>
+<input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant outline-none" id="searchInput" placeholder="Buscar por nombre de recurso escolar o aula..." type="text"/>
+<button class="hidden text-on-surface-variant hover:text-primary text-[18px]" id="clearSearchBtn">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs self-end md:self-auto">
+<div class="flex items-center gap-space-2xs px-space-sm py-space-xs bg-surface-container-low border border-surface-container-high rounded-lg font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">sort_by_alpha</span>
+<span class="font-bold text-primary">Orden A-Z</span>
+<span class="text-on-surface-variant ml-space-2xs">(Automático)</span>
+</div>
+</div>
+</div>
+<!-- Contenedor de la Tabla Interactiva de Objetos -->
+<div class="bg-surface-container-lowest border border-surface-container-high rounded-xl shadow-sm overflow-hidden mb-space-xl">
+<!-- Encabezado de Columnas (Desktop) -->
+<div class="hidden md:grid grid-cols-12 gap-space-sm px-space-md py-space-sm bg-surface-container-low border-b border-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider items-center">
+<div class="col-span-5 flex items-center gap-space-xs">
+<span class="">Artículo / Descripción del Insumo</span>
+</div>
+<div class="col-span-3">
+<span class="">Ubicación / Área Responsable</span>
+</div>
+<div class="col-span-2 text-center">
+<span class="">Disponibilidad</span>
+</div>
+<div class="col-span-2 text-right pr-space-xs">
+<span class="">Gestión de Stock</span>
+</div>
+</div>
+<!-- Contenedor Dinámico de Filas -->
+<div class="flex flex-col divide-y divide-surface-container-high" id="inventoryList"></div>
+<!-- Estado Vacío -->
+<div class="hidden p-space-2xl text-center flex-col items-center justify-center" id="emptyState">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-primary mb-space-sm">
+<span class="material-symbols-outlined text-[32px]">inventory_2</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">No se encontraron artículos</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm mt-space-2xs">
+        No hay registros que coincidan con la búsqueda. Intenta con otro término o añade un nuevo artículo.
+      </p>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 2: CONTEO RÁPIDO (Semáforo de menor a mayor stock) -->
+<section class="hidden flex-col w-full" id="viewConteoRapido">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low border border-surface-container-high shadow-sm p-space-lg md:p-space-xl mb-space-lg mt-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div>
+<div class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded-full bg-surface-container-highest text-primary font-label-md text-label-md mb-space-xs border border-outline-variant/40">
+<span class="material-symbols-outlined text-[16px]">speed</span>
+        Supervisión Inmediata de Existencias
+      </div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-space-xs">
+        Módulo de Conteo Rápido
+      </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+        Recursos ordenados de <strong class="text-on-surface">menor a mayor stock</strong> con clasificación por semáforo de prioridad pedagógica.
+      </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs bg-surface-container-lowest p-space-xs rounded-xl border border-surface-container-high text-label-sm font-semibold">
+<span class="inline-flex items-center gap-1.5 px-space-xs py-1 rounded-full bg-[#fde8e8] text-[#8b1a1a] border border-[#f5b8b8]">
+<span class="w-2 h-2 rounded-full bg-[#ba1a1a]"></span> &lt; 20 uds (Crítico)
+</span>
+<span class="inline-flex items-center gap-1.5 px-space-xs py-1 rounded-full bg-[#fdf3dc] text-[#8c5b0d] border border-[#fae2a6]">
+<span class="w-2 h-2 rounded-full bg-[#d9822b]"></span> 20 - 40 uds (Medio)
+</span>
+<span class="inline-flex items-center gap-1.5 px-space-xs py-1 rounded-full bg-[#eaf4eb] text-[#245e33] border border-[#c1e2c6]">
+<span class="w-2 h-2 rounded-full bg-[#2e7d32]"></span> &gt; 40 uds (Óptimo / Muy Alto)
+</span>
+</div>
+</div>
+</div>
+<!-- Grid de Tarjetas de Conteo Rápido -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md mb-space-xl" id="conteoCardsContainer">
+<!-- Dinámico -->
+</div>
+</section>
+<!-- SECCIÓN 3: REPORTES Y LOTES (Bitácora de Recepciones) -->
+<section class="hidden flex-col w-full" id="viewReportesLotes">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low border border-surface-container-high shadow-sm p-space-lg md:p-space-xl mb-space-lg mt-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div>
+<div class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded-full bg-surface-container-highest text-primary font-label-md text-label-md mb-space-xs border border-outline-variant/40">
+<span class="material-symbols-outlined text-[16px]">local_shipping</span>
+        Recepción de Insumos y Envíos
+      </div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-space-xs">
+        Reportes y Fichas de Lotes
+      </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+        Bitácora permanente de envíos recibidos, proveedores y verificación de insumos escolares.
+      </p>
+</div>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-primary hover:bg-primary-hover text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm hover:shadow transition-all active:scale-[0.98] self-start md:self-auto" id="btnOpenNewBatch" type="button">
+<span class="material-symbols-outlined text-[20px]">post_add</span>
+<span>+ Añadir Nuevo Reporte / Lote</span>
+</button>
+</div>
+</div>
+<!-- Listado de Lotes / Reportes -->
+<div class="grid grid-cols-1 gap-space-md mb-space-xl" id="batchesListContainer">
+<!-- Dinámico -->
+</div>
+</section>
+<!-- MODAL INTERACTIVO: AÑADIR NUEVO OBJETO (Consistencia de Iconos por Categoría) -->
+<div class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm hidden items-center justify-center p-4" id="modalNewItem">
+<div class="bg-surface-container-lowest rounded-2xl border border-surface-container-high shadow-2xl max-w-xl w-full p-space-lg relative animate-in fade-in zoom-in-95 duration-200">
+<div class="flex items-center justify-between border-b border-surface-container-high pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[20px]">add_box</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">Registrar Nuevo Material o Equipo</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Se insertará en estricto orden alfabético A-Z.</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-primary p-1 rounded-lg hover:bg-surface-container-high transition-colors" id="btnCloseModalItem" type="button">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<form class="space-y-space-md" id="formNewItemModal">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="inputModalItemName">Nombre del Recurso / Insumo *</label>
+<input class="w-full h-11 px-space-sm bg-surface-container-low focus:bg-surface-container-lowest border border-outline-variant/60 focus:border-primary rounded-lg font-body-md text-on-surface outline-none transition-all" id="inputModalItemName" placeholder="Ej. Tijeras escolares, Conos de entrenamiento..." required="" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="selectModalCategory">Ubicación / Etiqueta *</label>
+<div class="flex items-center gap-1 text-[11px] font-semibold text-primary px-1.5 py-0.5 rounded bg-surface-container-high" id="categoryIconBadge">
+<span class="material-symbols-outlined text-[15px]" id="previewCategoryIcon">sports_basketball</span>
+<span id="previewCategoryText">Icono asignado</span>
+</div>
+</div>
+<select class="w-full h-11 px-space-sm bg-surface-container-low focus:bg-surface-container-lowest border border-outline-variant/60 focus:border-primary rounded-lg font-body-md text-on-surface outline-none transition-all" id="selectModalCategory" required="">
+<option data-icon="sports_basketball" value="Educación Física">Educación Física</option>
+<option data-icon="brush" value="Aulas generales">Aulas generales</option>
+<option data-icon="calculate" value="Matemáticas / Ciencias">Matemáticas / Ciencias</option>
+<option data-icon="palette" value="Artes y Primaria">Artes y Primaria</option>
+<option data-icon="menu_book" value="Administración">Administración</option>
+<option data-icon="architecture" value="Geometría / Dibujo">Geometría / Dibujo</option>
+<option data-icon="biotech" value="Laboratorio de Biología">Laboratorio de Biología</option>
+<option data-icon="content_copy" value="Fotocopiado / Dirección">Fotocopiado / Dirección</option>
+<option data-icon="videocam" value="Audiovisuales">Audiovisuales</option>
+<option data-icon="content_cut" value="Talleres infantiles">Talleres infantiles</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="inputModalItemMin">Mínimo sugerido (Alerta) *</label>
+<input class="w-full h-11 px-space-sm bg-surface-container-low focus:bg-surface-container-lowest border border-outline-variant/60 focus:border-primary rounded-lg font-body-md text-on-surface outline-none transition-all" id="inputModalItemMin" min="1" required="" type="number" value="10"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="inputModalItemQty">Cantidad Inicial Disponible *</label>
+<input class="w-full h-11 px-space-sm bg-surface-container-low focus:bg-surface-container-lowest border border-outline-variant/60 focus:border-primary rounded-lg font-title-md text-on-surface font-bold outline-none transition-all" id="inputModalItemQty" min="0" required="" type="number" value="15"/>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs border-t border-surface-container-high">
+<button class="px-space-md py-2.5 rounded-lg border border-surface-container-high hover:bg-surface-container-high text-on-surface-variant font-label-lg transition-colors" id="btnCancelModalItem" type="button">
+Cancelar
+</button>
+<button class="flex items-center gap-space-xs px-space-lg py-2.5 bg-primary hover:bg-primary-hover text-on-primary font-label-lg rounded-lg shadow-sm transition-all active:scale-[0.98]" type="submit">
+<span class="material-symbols-outlined text-[18px]">save</span>
+Guardar en Inventario
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- MODAL INTERACTIVO: REGISTRAR NUEVO REPORTE / LOTE -->
+<div class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm hidden items-center justify-center p-4" id="modalNewBatch">
+<div class="bg-surface-container-lowest rounded-2xl border border-surface-container-high shadow-2xl max-w-xl w-full p-space-lg relative animate-in fade-in zoom-in-95 duration-200">
+<div class="flex items-center justify-between border-b border-surface-container-high pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">Ficha de Recepción de Lote</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Registra remesas, insumos entrantes y notas de entrega.</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-primary p-1 rounded-lg hover:bg-surface-container-high transition-colors" id="btnCloseModalBatch" type="button">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<form class="space-y-space-md" id="formNewBatchModal">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="inputBatchTitle">Título o Código de Lote *</label>
+<input class="w-full h-11 px-space-sm bg-surface-container-low focus:bg-surface-container-lowest border border-outline-variant/60 focus:border-primary rounded-lg font-body-md text-on-surface outline-none transition-all" id="inputBatchTitle" placeholder="Ej. Lote #2025-03: Materiales Plásticos y Papel" required="" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="inputBatchDate">Fecha y Hora de Recepción *</label>
+<input class="w-full h-11 px-space-sm bg-surface-container-low focus:bg-surface-container-lowest border border-outline-variant/60 focus:border-primary rounded-lg font-body-md text-on-surface outline-none transition-all" id="inputBatchDate" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="selectBatchStatus">Estado del Lote *</label>
+<select class="w-full h-11 px-space-sm bg-surface-container-low focus:bg-surface-container-lowest border border-outline-variant/60 focus:border-primary rounded-lg font-body-md text-on-surface outline-none transition-all" id="selectBatchStatus" required="">
+<option value="Verificado y Almacenado">Verificado y Almacenado</option>
+<option value="En Revisión y Conteo">En Revisión y Conteo</option>
+<option value="Pendiente de Ubicación">Pendiente de Ubicación</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="inputBatchSupplier">Proveedor / Quien Entrega *</label>
+<input class="w-full h-11 px-space-sm bg-surface-container-low focus:bg-surface-container-lowest border border-outline-variant/60 focus:border-primary rounded-lg font-body-md text-on-surface outline-none transition-all" id="inputBatchSupplier" placeholder="Ej. Distribuidora Escolar Nacional / Prof. Carlos Méndez" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="inputBatchDetails">Detalle de Insumos Recibidos y Cantidades *</label>
+<textarea class="w-full p-space-sm bg-surface-container-low focus:bg-surface-container-lowest border border-outline-variant/60 focus:border-primary rounded-lg font-body-md text-on-surface outline-none transition-all resize-none" id="inputBatchDetails" placeholder="Ej. Llegaron 50 resmas de papel bond A4, 20 calculadoras científicas y 15 juegos de geometría para secundaria." required="" rows="3"></textarea>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs border-t border-surface-container-high">
+<button class="px-space-md py-2.5 rounded-lg border border-surface-container-high hover:bg-surface-container-high text-on-surface-variant font-label-lg transition-colors" id="btnCancelModalBatch" type="button">
+Cancelar
+</button>
+<button class="flex items-center gap-space-xs px-space-lg py-2.5 bg-primary hover:bg-primary-hover text-on-primary font-label-lg rounded-lg shadow-sm transition-all active:scale-[0.98]" type="submit">
+<span class="material-symbols-outlined text-[18px]">save</span>
+Guardar Reporte
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Alerta / Notificación Toast Flotante -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 flex items-center gap-space-xs px-space-md py-space-sm bg-primary text-on-primary rounded-xl shadow-xl pointer-events-none" id="toastNotification">
+<span class="material-symbols-outlined text-primary-fixed text-[20px]" id="toastIcon">check_circle</span>
+<span class="font-label-md text-label-md text-white font-medium" id="toastMessage">Inventario actualizado con éxito</span>
+</div>
+</main></div>
+<script>
+  (function() {
+    // 1. MAPA ESTRICTO DE ICONOS POR ETIQUETA / ÁREA
+    const CATEGORY_ICON_MAP = {
+      "Educación Física": "sports_basketball",
+      "Aulas generales": "brush",
+      "Matemáticas / Ciencias": "calculate",
+      "Artes y Primaria": "palette",
+      "Administración": "menu_book",
+      "Geometría / Dibujo": "architecture",
+      "Laboratorio de Biología": "biotech",
+      "Fotocopiado / Dirección": "content_copy",
+      "Audiovisuales": "videocam",
+      "Talleres infantiles": "content_cut"
+    };
+
+    // Dataset Inicial Persistible
+    const defaultInventory = [
+      { id: "art-01", name: "Balones de Baloncesto", category: "Educación Física", qty: 24, min: 10, icon: "sports_basketball" },
+      { id: "art-02", name: "Borradores para Pizarra", category: "Aulas generales", qty: 45, min: 15, icon: "brush" },
+      { id: "art-03", name: "Calculadoras Científicas", category: "Matemáticas / Ciencias", qty: 32, min: 12, icon: "calculate" },
+      { id: "art-04", name: "Crayones y Lápices de Colores (Cajas)", category: "Artes y Primaria", qty: 85, min: 25, icon: "palette" },
+      { id: "art-05", name: "Cuadernos de Registro Docente", category: "Administración", qty: 18, min: 10, icon: "menu_book" },
+      { id: "art-06", name: "Instrumentos de Geometría (Juegos)", category: "Geometría / Dibujo", qty: 40, min: 15, icon: "architecture" },
+      { id: "art-07", name: "Microscopios Ópticos", category: "Laboratorio de Biología", qty: 14, min: 8, icon: "biotech" },
+      { id: "art-08", name: "Papel Bond A4 (Resmas)", category: "Fotocopiado / Dirección", qty: 380, min: 100, icon: "content_copy" },
+      { id: "art-09", name: "Proyectores Multimedia HDMI", category: "Audiovisuales", qty: 6, min: 8, icon: "videocam" },
+      { id: "art-10", name: "Tijeras de Punta Redonda", category: "Talleres infantiles", qty: 8, min: 20, icon: "content_cut" }
+    ];
+
+    // Dataset Inicial de Lotes / Reportes
+    const defaultBatches = [
+      {
+        id: "batch-01",
+        title: "Lote #2025-01: Entrega Trimestral de Papelería Central",
+        date: "24 Feb 2025 - 09:30 AM",
+        supplier: "Papelera Andina S.A. (Guía de Remisión #4492)",
+        details: "Recepción oficial de 250 resmas de papel bond A4, 40 borradores para pizarra blanca y 20 libretas docentes.",
+        status: "Verificado y Almacenado"
+      },
+      {
+        id: "batch-02",
+        title: "Lote #2025-02: Equipamiento Deportivo y Recreación",
+        date: "18 Feb 2025 - 11:15 AM",
+        supplier: "Deportes Villafañe & Asoc. (Entregó Prof. Héctor)",
+        details: "Llegaron 15 balones de baloncesto reglamentarios, 8 balones de vóley y 12 silbatos metálicos con cordón.",
+        status: "Verificado y Almacenado"
+      },
+      {
+        id: "batch-03",
+        title: "Lote #2025-03: Dotación Tecnológica y Proyectores",
+        date: "10 Feb 2025 - 03:40 PM",
+        supplier: "TecnoAulas Mayorista (Orden #8821)",
+        details: "Llegaron 2 proyectores HDMI Epson y 10 adaptadores tipo C para las salas audiovisuales del 2do piso.",
+        status: "En Revisión y Conteo"
+      }
+    ];
+
+    // Carga de LocalStorage
+    let inventoryData = [];
+    try {
+      const storedInv = localStorage.getItem('zyi_inventory_data');
+      inventoryData = storedInv ? JSON.parse(storedInv) : defaultInventory;
+    } catch (e) {
+      inventoryData = defaultInventory;
+    }
+
+    let batchesData = [];
+    try {
+      const storedBatches = localStorage.getItem('zyi_batches_data');
+      batchesData = storedBatches ? JSON.parse(storedBatches) : defaultBatches;
+    } catch (e) {
+      batchesData = defaultBatches;
+    }
+
+    function saveInventory() {
+      try {
+        localStorage.setItem('zyi_inventory_data', JSON.stringify(inventoryData));
+      } catch (e) {}
+    }
+
+    function saveBatches() {
+      try {
+        localStorage.setItem('zyi_batches_data', JSON.stringify(batchesData));
+      } catch (e) {}
+    }
+
+    // Elementos del DOM
+    const viewInventario = document.getElementById('viewInventario');
+    const viewConteoRapido = document.getElementById('viewConteoRapido');
+    const viewReportesLotes = document.getElementById('viewReportesLotes');
+    const navButtons = document.querySelectorAll('.nav-btn');
+
+    const inventoryListEl = document.getElementById('inventoryList');
+    const emptyStateEl = document.getElementById('emptyState');
+    const searchInput = document.getElementById('searchInput');
+    const clearSearchBtn = document.getElementById('clearSearchBtn');
+
+    const conteoCardsContainer = document.getElementById('conteoCardsContainer');
+    const batchesListContainer = document.getElementById('batchesListContainer');
+
+    // Métricas
+    const metricTotalArticles = document.getElementById('metricTotalArticles');
+    const metricTotalUnits = document.getElementById('metricTotalUnits');
+    const metricLowStock = document.getElementById('metricLowStock');
+
+    // Modales
+    const modalNewItem = document.getElementById('modalNewItem');
+    const btnOpenNewItem = document.getElementById('btnOpenNewItem');
+    const btnCloseModalItem = document.getElementById('btnCloseModalItem');
+    const btnCancelModalItem = document.getElementById('btnCancelModalItem');
+    const formNewItemModal = document.getElementById('formNewItemModal');
+    const selectModalCategory = document.getElementById('selectModalCategory');
+    const previewCategoryIcon = document.getElementById('previewCategoryIcon');
+
+    const modalNewBatch = document.getElementById('modalNewBatch');
+    const btnOpenNewBatch = document.getElementById('btnOpenNewBatch');
+    const btnCloseModalBatch = document.getElementById('btnCloseModalBatch');
+    const btnCancelModalBatch = document.getElementById('btnCancelModalBatch');
+    const formNewBatchModal = document.getElementById('formNewBatchModal');
+    const inputBatchDate = document.getElementById('inputBatchDate');
+
+    // Ciclo Escolar editable
+    const cycleInput = document.getElementById('cycleInput');
+    const btnEditCycle = document.getElementById('btnEditCycle');
+    if (btnEditCycle && cycleInput) {
+      btnEditCycle.addEventListener('click', () => {
+        cycleInput.focus();
+        cycleInput.select();
+      });
+      cycleInput.addEventListener('change', () => {
+        showToast(`Ciclo escolar actualizado: ${cycleInput.value}`);
+      });
+    }
+
+    // Toast
+    const toast = document.getElementById('toastNotification');
+    const toastMsg = document.getElementById('toastMessage');
+    const toastIcon = document.getElementById('toastIcon');
+    let toastTimeout = null;
+
+    function showToast(text, icon = 'check_circle') {
+      if (toastTimeout) clearTimeout(toastTimeout);
+      toastMsg.innerText = text;
+      toastIcon.innerText = icon;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 2500);
+    }
+
+    // Navegación en Barra Lateral
+    function switchView(targetView) {
+      navButtons.forEach(btn => {
+        const isSelected = btn.getAttribute('data-nav') === targetView;
+        if (isSelected) {
+          btn.className = 'nav-btn w-full text-left flex items-center px-space-sm py-space-xs rounded-lg transition-all gap-space-sm bg-primary text-on-primary font-title-md shadow-sm';
+        } else {
+          btn.className = 'nav-btn w-full text-left flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-lg text-label-lg';
+        }
+      });
+
+      viewInventario.classList.add('hidden');
+      viewConteoRapido.classList.add('hidden');
+      viewReportesLotes.classList.add('hidden');
+
+      if (targetView === 'inventario-general') {
+        viewInventario.classList.remove('hidden');
+        renderInventory();
+      } else if (targetView === 'conteo-rapido') {
+        viewConteoRapido.classList.remove('hidden');
+        renderConteoRapido();
+      } else if (targetView === 'reportes-y-auditorias') {
+        viewReportesLotes.classList.remove('hidden');
+        renderBatches();
+      }
+    }
+
+    navButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-nav');
+        switchView(target);
+      });
+    });
+
+    // Semáforo Conteo Rápido:
+    // < 20: Rojo suave / alerta crítica
+    // 20 a 40: Amarillo / Ámbar (Medio)
+    // > 40: Verde / Salvia (Stock Muy Alto / Óptimo)
+    function getConteoStockLevel(qty) {
+      if (qty < 20) {
+        return {
+          tier: 'Crítico (&lt; 20 uds)',
+          badgeClass: 'bg-[#fde8e8] text-[#8b1a1a] border border-[#f5b8b8]',
+          barColor: 'bg-[#ba1a1a]',
+          percent: Math.min(100, Math.max(8, (qty / 20) * 100)),
+          dotColor: 'bg-[#ba1a1a]',
+          statusName: 'Stock Crítico'
+        };
+      } else if (qty <= 40) {
+        return {
+          tier: 'Nivel Medio (20 - 40 uds)',
+          badgeClass: 'bg-[#fdf3dc] text-[#8c5b0d] border border-[#fae2a6]',
+          barColor: 'bg-[#d9822b]',
+          percent: Math.min(100, ((qty - 20) / 20) * 100 * 0.5 + 40),
+          dotColor: 'bg-[#d9822b]',
+          statusName: 'Nivel Medio'
+        };
+      } else {
+        return {
+          tier: 'Muy Alto / Óptimo (&gt; 40 uds)',
+          badgeClass: 'bg-[#eaf4eb] text-[#245e33] border border-[#c1e2c6]',
+          barColor: 'bg-[#2e7d32]',
+          percent: 100,
+          dotColor: 'bg-[#2e7d32]',
+          statusName: 'Stock Muy Alto'
+        };
+      }
+    }
+
+    // Badge de disponibilidad general
+    function getStatusBadge(qty, min) {
+      if (qty <= 0) {
+        return {
+          label: 'Agotado',
+          classes: 'bg-[#fde8e8] text-[#8b1a1a] font-label-sm border border-[#f5b8b8]',
+          icon: 'cancel'
+        };
+      } else if (qty <= min) {
+        return {
+          label: 'Stock Bajo',
+          classes: 'bg-[#fbedd8] text-[#7d3f13] font-label-sm border border-[#e8cb9b]',
+          icon: 'warning'
+        };
+      } else {
+        return {
+          label: 'En Stock',
+          classes: 'bg-surface-container text-primary font-label-sm border border-outline-variant/60',
+          icon: 'check'
+        };
+      }
+    }
+
+    function refreshMetrics() {
+      metricTotalArticles.innerText = inventoryData.length;
+      const totalUnits = inventoryData.reduce((acc, curr) => acc + Number(curr.qty), 0);
+      metricTotalUnits.innerText = totalUnits.toLocaleString();
+
+      const lowCount = inventoryData.filter(i => i.qty <= i.min).length;
+      metricLowStock.innerText = lowCount;
+    }
+
+    // RENDER: INVENTARIO GENERAL (Orden A-Z)
+    function renderInventory() {
+      // Orden alfabético estricto A-Z
+      inventoryData.sort((a, b) => a.name.localeCompare(b.name, 'es', { sensitivity: 'base' }));
+      saveInventory();
+
+      const query = (searchInput.value || '').trim().toLowerCase();
+      const filtered = inventoryData.filter(item => {
+        return item.name.toLowerCase().includes(query) || item.category.toLowerCase().includes(query);
+      });
+
+      inventoryListEl.innerHTML = '';
+
+      if (filtered.length === 0) {
+        emptyStateEl.classList.remove('hidden');
+        emptyStateEl.classList.add('flex');
+      } else {
+        emptyStateEl.classList.add('hidden');
+        emptyStateEl.classList.remove('flex');
+
+        filtered.forEach((item) => {
+          // Asigna icono estricto por categoría si no coincide
+          const currentIcon = CATEGORY_ICON_MAP[item.category] || item.icon || 'inventory_2';
+          const status = getStatusBadge(item.qty, item.min);
+
+          const row = document.createElement('div');
+          row.className = 'group p-space-md hover:bg-surface-container-low/80 transition-colors flex flex-col md:grid md:grid-cols-12 gap-space-sm items-start md:items-center';
+          row.setAttribute('data-id', item.id);
+
+          row.innerHTML = `
+            <!-- Nombre y Avatar -->
+            <div class="col-span-5 flex items-center gap-space-sm w-full">
+              <div class="w-10 h-10 rounded-lg bg-surface-container border border-surface-container-high flex items-center justify-center text-primary shrink-0 group-hover:bg-primary-fixed group-hover:text-primary transition-colors">
+                <span class="material-symbols-outlined text-[22px]">${currentIcon}</span>
+              </div>
+              <div class="flex flex-col min-w-0">
+                <div class="flex items-center gap-space-2xs">
+                  <span class="font-title-md text-title-md text-on-surface truncate font-semibold">${item.name}</span>
+                </div>
+                <span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+                  Mínimo sugerido: ${item.min} uds.
+                </span>
+              </div>
+            </div>
+
+            <!-- Categoría -->
+            <div class="col-span-3 flex items-center w-full">
+              <span class="px-space-xs py-1 rounded-full bg-surface-container border border-surface-container-high font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">place</span>
+                ${item.category}
+              </span>
+            </div>
+
+            <!-- Disponibilidad / Estado -->
+            <div class="col-span-2 flex items-center md:justify-center w-full">
+              <span class="inline-flex items-center gap-1 px-space-xs py-1 rounded-full ${status.classes}">
+                <span class="material-symbols-outlined text-[14px]">${status.icon}</span>
+                ${status.label}
+              </span>
+            </div>
+
+            <!-- Controles Interactivos de Cantidad Directa -->
+            <div class="col-span-2 flex items-center justify-between md:justify-end gap-space-xs w-full">
+              <div class="inline-flex items-center bg-surface-container-low border border-surface-container-high rounded-lg p-1 shadow-xs">
+                <!-- Botón Decremento -->
+                <button type="button" data-action="decrement" data-id="${item.id}" class="w-8 h-8 rounded flex items-center justify-center bg-surface-container-lowest text-on-surface hover:bg-primary hover:text-on-primary transition-all active:scale-95 text-title-md font-bold" title="Reducir uno">
+                  <span class="material-symbols-outlined text-[18px]">remove</span>
+                </button>
+
+                <!-- Input Numérico Editable Directo -->
+                <input type="number" min="0" value="${item.qty}" data-id="${item.id}" class="item-qty-input w-14 h-8 bg-transparent text-center font-numeric-stepper text-numeric-stepper text-on-surface font-bold outline-none focus:bg-surface-container-lowest rounded px-1 transition-all" />
+
+                <!-- Botón Incremento -->
+                <button type="button" data-action="increment" data-id="${item.id}" class="w-8 h-8 rounded flex items-center justify-center bg-surface-container-lowest text-on-surface hover:bg-primary hover:text-on-primary transition-all active:scale-95 text-title-md font-bold" title="Aumentar uno">
+                  <span class="material-symbols-outlined text-[18px]">add</span>
+                </button>
+              </div>
+
+              <!-- Botón Eliminar -->
+              <button type="button" data-action="delete" data-id="${item.id}" class="p-space-2xs text-on-surface-variant hover:text-error hover:bg-error-container/50 rounded-lg transition-colors ml-space-2xs" title="Eliminar registro">
+                <span class="material-symbols-outlined text-[18px]">delete</span>
+              </button>
+            </div>
+          `;
+
+          inventoryListEl.appendChild(row);
+        });
+      }
+
+      refreshMetrics();
+    }
+
+    // RENDER: CONTEO RÁPIDO (Ordenado de MENOR A MAYOR STOCK)
+    function renderConteoRapido() {
+      // Ordenar por stock ascendente
+      const sortedByQty = [...inventoryData].sort((a, b) => Number(a.qty) - Number(b.qty));
+      conteoCardsContainer.innerHTML = '';
+
+      sortedByQty.forEach((item) => {
+        const currentIcon = CATEGORY_ICON_MAP[item.category] || item.icon || 'inventory_2';
+        const level = getConteoStockLevel(item.qty);
+
+        const card = document.createElement('div');
+        card.className = 'bg-surface-container-lowest rounded-xl border border-surface-container-high p-space-md shadow-xs hover:shadow-md transition-all flex flex-col justify-between';
+        
+        card.innerHTML = `
+          <div>
+            <div class="flex items-start justify-between gap-space-xs mb-space-sm">
+              <div class="flex items-center gap-space-xs">
+                <div class="w-10 h-10 rounded-lg bg-surface-container border border-surface-container-high flex items-center justify-center text-primary shrink-0">
+                  <span class="material-symbols-outlined text-[22px]">${currentIcon}</span>
+                </div>
+                <div>
+                  <h4 class="font-title-md text-title-md text-on-surface font-semibold leading-snug line-clamp-1" title="${item.name}">${item.name}</h4>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[13px]">place</span>
+                    ${item.category}
+                  </span>
+                </div>
+              </div>
+              <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-label-sm font-semibold ${level.badgeClass} whitespace-nowrap">
+                <span class="w-2 h-2 rounded-full ${level.dotColor}"></span>
+                ${level.statusName}
+              </span>
+            </div>
+
+            <!-- Métrica Destacada de Stock -->
+            <div class="my-space-sm flex items-baseline justify-between">
+              <span class="font-label-sm text-on-surface-variant uppercase font-semibold">Stock Disponible:</span>
+              <div class="flex items-baseline gap-1">
+                <span class="text-3xl font-bold font-numeric-stepper text-on-surface">${item.qty}</span>
+                <span class="font-label-sm text-on-surface-variant font-medium">unidades</span>
+              </div>
+            </div>
+
+            <!-- Barra de Progreso Semáforo -->
+            <div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden my-1">
+              <div class="h-full rounded-full ${level.barColor} transition-all duration-500" style="width: ${level.percent}%;"></div>
+            </div>
+            <div class="flex items-center justify-between text-body-sm text-on-surface-variant mt-1">
+              <span>Mín. sugerido: ${item.min}</span>
+              <span class="font-medium">${level.tier}</span>
+            </div>
+          </div>
+
+          <!-- Ajuste Rápido de Stock en la Tarjeta -->
+          <div class="pt-space-sm mt-space-sm border-t border-surface-container-high flex items-center justify-between">
+            <span class="font-label-sm text-on-surface-variant">Ajuste rápido:</span>
+            <div class="inline-flex items-center bg-surface-container-low border border-surface-container-high rounded-lg p-0.5">
+              <button type="button" data-action="quick-dec" data-id="${item.id}" class="w-7 h-7 rounded flex items-center justify-center bg-surface-container-lowest text-on-surface hover:bg-primary hover:text-on-primary transition-colors text-sm font-bold">
+                <span class="material-symbols-outlined text-[16px]">remove</span>
+              </button>
+              <span class="w-10 text-center font-bold font-numeric-stepper text-on-surface text-sm">${item.qty}</span>
+              <button type="button" data-action="quick-inc" data-id="${item.id}" class="w-7 h-7 rounded flex items-center justify-center bg-surface-container-lowest text-on-surface hover:bg-primary hover:text-on-primary transition-colors text-sm font-bold">
+                <span class="material-symbols-outlined text-[16px]">add</span>
+              </button>
+            </div>
+          </div>
+        `;
+
+        conteoCardsContainer.appendChild(card);
+      });
+    }
+
+    // Delegación eventos Conteo Rápido
+    conteoCardsContainer.addEventListener('click', (e) => {
+      const btn = e.target.closest('button');
+      if (!btn) return;
+      const id = btn.getAttribute('data-id');
+      const action = btn.getAttribute('data-action');
+      const target = inventoryData.find(i => i.id === id);
+      if (!target) return;
+
+      if (action === 'quick-inc') {
+        target.qty += 1;
+        saveInventory();
+        renderConteoRapido();
+        showToast(`Stock de "${target.name}" aumentado a ${target.qty}`);
+      } else if (action === 'quick-dec') {
+        if (target.qty > 0) {
+          target.qty -= 1;
+          saveInventory();
+          renderConteoRapido();
+          showToast(`Stock de "${target.name}" reducido a ${target.qty}`);
+        }
+      }
+    });
+
+    // RENDER: REPORTES Y LOTES
+    function renderBatches() {
+      batchesListContainer.innerHTML = '';
+      saveBatches();
+
+      if (batchesData.length === 0) {
+        batchesListContainer.innerHTML = `
+          <div class="p-space-2xl text-center bg-surface-container-lowest rounded-xl border border-surface-container-high flex flex-col items-center">
+            <span class="material-symbols-outlined text-[40px] text-primary mb-2">inbox</span>
+            <p class="font-title-md font-semibold text-on-surface">No hay reportes de lotes registrados</p>
+            <p class="font-body-sm text-on-surface-variant mt-1">Haz clic en "+ Añadir Nuevo Reporte / Lote" para guardar una remesa.</p>
+          </div>
+        `;
+        return;
+      }
+
+      batchesData.forEach((batch) => {
+        const card = document.createElement('div');
+        card.className = 'bg-surface-container-lowest rounded-xl border border-surface-container-high shadow-sm p-space-md md:p-space-lg flex flex-col md:flex-row md:items-start justify-between gap-space-md transition-all hover:border-primary/40';
+        
+        card.innerHTML = `
+          <div class="flex-1">
+            <div class="flex flex-wrap items-center gap-space-xs mb-space-2xs">
+              <span class="px-space-xs py-0.5 rounded-full bg-surface-container border border-surface-container-high font-label-sm text-primary font-bold flex items-center gap-1">
+                <span class="material-symbols-outlined text-[15px]">inventory</span>
+                ${batch.title}
+              </span>
+              <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-label-sm font-semibold bg-[#eaf4eb] text-[#245e33] border border-[#c1e2c6]">
+                <span class="material-symbols-outlined text-[14px]">verified</span>
+                ${batch.status}
+              </span>
+            </div>
+
+            <div class="flex items-center gap-space-xs text-body-sm text-on-surface-variant mt-1">
+              <span class="flex items-center gap-1">
+                <span class="material-symbols-outlined text-[15px] text-primary">calendar_clock</span>
+                ${batch.date}
+              </span>
+              <span>•</span>
+              <span class="flex items-center gap-1">
+                <span class="material-symbols-outlined text-[15px] text-primary">business</span>
+                ${batch.supplier}
+              </span>
+            </div>
+
+            <div class="mt-space-sm p-space-sm bg-surface-container-low rounded-lg border border-surface-container-high/60">
+              <span class="font-label-sm text-on-surface-variant font-bold uppercase tracking-wider block mb-1">Detalle de Insumos Recibidos:</span>
+              <p class="font-body-md text-on-surface leading-relaxed">${batch.details}</p>
+            </div>
+          </div>
+
+          <div class="flex md:flex-col items-end justify-between gap-space-sm shrink-0">
+            <button type="button" data-batch-delete="${batch.id}" class="p-2 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/50 transition-colors flex items-center gap-1 font-label-sm" title="Eliminar este reporte">
+              <span class="material-symbols-outlined text-[18px]">delete</span>
+              <span class="hidden md:inline">Eliminar Lote</span>
+            </button>
+          </div>
+        `;
+
+        batchesListContainer.appendChild(card);
+      });
+    }
+
+    // Delegación Eliminar Lote
+    batchesListContainer.addEventListener('click', (e) => {
+      const btn = e.target.closest('button[data-batch-delete]');
+      if (!btn) return;
+      const id = btn.getAttribute('data-batch-delete');
+      const target = batchesData.find(b => b.id === id);
+      if (!target) return;
+
+      if (confirm(`¿Deseas eliminar el reporte "${target.title}"?`)) {
+        batchesData = batchesData.filter(b => b.id !== id);
+        renderBatches();
+        showToast('Reporte de lote eliminado', 'delete');
+      }
+    });
+
+    // Control de Cantidades en Inventario General (+ / - / input)
+    function updateItemQty(id, newQty, triggerFeedback = true) {
+      const parsed = Math.max(0, parseInt(newQty, 10) || 0);
+      const target = inventoryData.find(i => i.id === id);
+      if (target) {
+        target.qty = parsed;
+        saveInventory();
+        renderInventory();
+        if (triggerFeedback) {
+          showToast(`"${target.name}" actualizado a ${target.qty} uds.`);
+        }
+      }
+    }
+
+    inventoryListEl.addEventListener('click', (e) => {
+      const btn = e.target.closest('button');
+      if (!btn) return;
+
+      const action = btn.getAttribute('data-action');
+      const id = btn.getAttribute('data-id');
+      const target = inventoryData.find(i => i.id === id);
+
+      if (!target) return;
+
+      if (action === 'increment') {
+        updateItemQty(id, target.qty + 1);
+      } else if (action === 'decrement') {
+        if (target.qty > 0) {
+          updateItemQty(id, target.qty - 1);
+        } else {
+          showToast(`"${target.name}" ya se encuentra en cero`, 'warning');
+        }
+      } else if (action === 'delete') {
+        if (confirm(`¿Deseas eliminar "${target.name}" del inventario escolar?`)) {
+          inventoryData = inventoryData.filter(i => i.id !== id);
+          saveInventory();
+          renderInventory();
+          showToast(`Se eliminó "${target.name}" del catálogo`, 'delete');
+        }
+      }
+    });
+
+    inventoryListEl.addEventListener('change', (e) => {
+      if (e.target.classList.contains('item-qty-input')) {
+        const id = e.target.getAttribute('data-id');
+        const val = e.target.value;
+        updateItemQty(id, val);
+      }
+    });
+
+    inventoryListEl.addEventListener('focusin', (e) => {
+      if (e.target.classList.contains('item-qty-input')) {
+        e.target.select();
+      }
+    });
+
+    // Actualización reactiva del icono al seleccionar categoría en el modal
+    function updateModalCategoryIcon() {
+      const cat = selectModalCategory.value;
+      const icon = CATEGORY_ICON_MAP[cat] || 'inventory_2';
+      previewCategoryIcon.innerText = icon;
+    }
+    selectModalCategory.addEventListener('change', updateModalCategoryIcon);
+
+    // Modal Nuevo Objeto
+    btnOpenNewItem.addEventListener('click', () => {
+      formNewItemModal.reset();
+      updateModalCategoryIcon();
+      modalNewItem.classList.remove('hidden');
+      modalNewItem.classList.add('flex');
+      document.getElementById('inputModalItemName').focus();
+    });
+
+    function closeModalItem() {
+      modalNewItem.classList.add('hidden');
+      modalNewItem.classList.remove('flex');
+    }
+    btnCloseModalItem.addEventListener('click', closeModalItem);
+    btnCancelModalItem.addEventListener('click', closeModalItem);
+
+    formNewItemModal.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('inputModalItemName').value.trim();
+      const category = selectModalCategory.value;
+      const qty = parseInt(document.getElementById('inputModalItemQty').value, 10) || 0;
+      const min = parseInt(document.getElementById('inputModalItemMin').value, 10) || 10;
+
+      if (!name) return;
+
+      // Asignar el icono exactamente correspondiente a la etiqueta seleccionada
+      const exactIcon = CATEGORY_ICON_MAP[category] || 'inventory_2';
+
+      const newItem = {
+        id: 'art-' + Date.now(),
+        name: name,
+        category: category,
+        qty: qty,
+        min: min,
+        icon: exactIcon
+      };
+
+      inventoryData.push(newItem);
+      saveInventory();
+      renderInventory();
+      closeModalItem();
+      showToast(`¡"${name}" agregado en orden alfabético A-Z!`, 'star');
+    });
+
+    // Modal Nuevo Lote / Reporte
+    btnOpenNewBatch.addEventListener('click', () => {
+      formNewBatchModal.reset();
+      // Generar fecha y hora actual automáticamente
+      const now = new Date();
+      const formattedDate = now.toLocaleDateString('es-ES', { day: '2-digit', month: 'short', year: 'numeric' }) + ' - ' + now.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit', hour12: true });
+      inputBatchDate.value = formattedDate;
+
+      modalNewBatch.classList.remove('hidden');
+      modalNewBatch.classList.add('flex');
+      document.getElementById('inputBatchTitle').focus();
+    });
+
+    function closeModalBatch() {
+      modalNewBatch.classList.add('hidden');
+      modalNewBatch.classList.remove('flex');
+    }
+    btnCloseModalBatch.addEventListener('click', closeModalBatch);
+    btnCancelModalBatch.addEventListener('click', closeModalBatch);
+
+    formNewBatchModal.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const title = document.getElementById('inputBatchTitle').value.trim();
+      const date = document.getElementById('inputBatchDate').value.trim();
+      const supplier = document.getElementById('inputBatchSupplier').value.trim();
+      const details = document.getElementById('inputBatchDetails').value.trim();
+      const status = document.getElementById('selectBatchStatus').value;
+
+      if (!title || !details) return;
+
+      const newBatch = {
+        id: 'batch-' + Date.now(),
+        title,
+        date,
+        supplier,
+        details,
+        status
+      };
+
+      batchesData.unshift(newBatch);
+      saveBatches();
+      renderBatches();
+      closeModalBatch();
+      showToast('¡Reporte de lote guardado exitosamente!', 'post_add');
+    });
+
+    // Búsqueda en Inventario General
+    searchInput.addEventListener('input', () => {
+      clearSearchBtn.classList.toggle('hidden', !searchInput.value);
+      renderInventory();
+    });
+
+    clearSearchBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      clearSearchBtn.classList.add('hidden');
+      renderInventory();
+      searchInput.focus();
+    });
+
+    // Render Inicial
+    renderInventory();
+  })();
+</script></body></html>
